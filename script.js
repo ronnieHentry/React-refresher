@@ -1,16 +1,16 @@
-function x () {
-	
-	var a = 100
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-	function y () {
-	
-		console.log(a);;
+const firstElement = React.createElement(
+  "div",
+  {},
+  React.createElement(
+    "p",
+    { style: { border: "2px solid black" } },
+    "Hello first project sss"
+  )
+);
 
-	}
-
-	return y;
-}
-
-let z = x();
-
-console.log(z());
+const domNode = document.getElementById("root");
+const root = createRoot(domNode);
+root.render(firstElement);

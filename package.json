@@ -1,0 +1,29 @@
+{
+  "name": "react-refresher",
+  "version": "1.0.0",
+  "description": "Learning react js core concepts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronnieHentry/React-refresher.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ronnie Robinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronnieHentry/React-refresher/issues"
+  },
+  "homepage": "https://github.com/ronnieHentry/React-refresher#readme",
+  "dependencies": {
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
