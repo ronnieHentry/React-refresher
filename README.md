@@ -32,3 +32,11 @@ JSX is converted into React.createElement code by babel which is then converted 
 Functional components: Functional components are just javascript functions that return React.createElement or JSX. The name of a functional component needs start with uppercase characters for babel to understand it's a component. The functional component can be displayed in DOM by calling it inside the root.render(functionalComponent()) or using jsx root.render(<FunctionalComponent />)
 A functional component can be rendered using jsx or invoking it like a regular function like the above example.
 JSX will prevent cross site scripting and prevents malicious attacks.
+
+# Episode 4
+
+Props: Functional components are javascript function. Props are arguments that you pass to the function. Props will be collated as a javascript object and this object can be used to make the content of a component dynamic.
+
+Config driven UI: Content that needs to be shown dynamically (Like in a food delivery app, the restaurants need to be dynamic for different locations) can be controlled by using this UI method. The response from backend determines what is to be displayed on the UI.
+
+Keys: While mapping components from an array, always provide a key to each component so react knows which are new elements that need to be rendered. Not providing a unique key will cause react to re-render the entire list which will cause performance to take a hit. Also, providing the index as key is not a good practise because the order of items inside array might change. But if the data does not have unique id property, use the index.
