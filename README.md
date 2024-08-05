@@ -40,3 +40,35 @@ Props: Functional components are javascript function. Props are arguments that y
 Config driven UI: Content that needs to be shown dynamically (Like in a food delivery app, the restaurants need to be dynamic for different locations) can be controlled by using this UI method. The response from backend determines what is to be displayed on the UI.
 
 Keys: While mapping components from an array, always provide a key to each component so react knows which are new elements that need to be rendered. Not providing a unique key will cause react to re-render the entire list which will cause performance to take a hit. Also, providing the index as key is not a good practise because the order of items inside array might change. But if the data does not have unique id property, use the index.
+
+# Episode 5
+
+Hooks: Normal jsvacript functions provided by react.
+
+useState: Used to keep variables inside a component and update the UI when it's value changes.
+Whenever a state variable changes, react re-render's the component
+
+React uses reconciliation (also known as react-fiber) whics is the algorithm used for diffing the previous virtual dom and updated virtual dom.
+
+Virtual DOM: React maintains a virtual DOM (the main object that is returned from React.createElement). Once the main object is updated, react uses the diff algorithm and compares the previous copy and updated copy of virtual DOM and tries to find out the difference between the two objects representing the DOM structure. Then react updates the actual DOM.
+Whenever a re-render is triggered, this process is done.
+
+# Episode 6
+
+The ideal process to load data in a react application is - Load the UI or skeleton UI - Make API call - Re-render the UI based on response.
+This approach gives better user experience.
+
+useEffect hook is another javascript function which takes in two parameters - a callback function and a dependency array.
+This function is first called after the initial render of the component.
+
+# Episode 7
+
+useEffect is called after the render of a component. The dependency array controls when the useEffect hook is called.
+If the dependency array is empty, the hook is called only on the initial render (when the component is mounted).
+To add basic routes in app, import "createBrowserRouter" from react-router-dom. Call the function createBrowserRouter and pass the routes as an array. Also add a errorElement prop in the "/" route.
+You can get more information about the error using the useRouterError hook from the router library.
+
+To add children routes (Keep the header and footer intact and display the route component UI below it):
+Add a children prop with the routes and add Outlet component from react router in the JSX.
+
+
